@@ -1,0 +1,65 @@
+$about-height: 600px;
+$btn-bg: #e2dbdb;
+$primary:#e92629;
+$dark: #000;
+$light: #fff;
+$radius: 20px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  @include flex-center;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  position: relative;
+  height: $about-height;
+  background-size: cover;
+  color: $dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .about-text {
+    margin-left: 2rem;
+    position: relative;
+    text-align: justify;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 900;
+      color: $dark;
+    }
+    .text-color {
+        color: $primary;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+      color: $dark;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: $btn-bg;
+      border-radius: $radius + 14px;
+      color: $dark;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary: #e92629;
+$dark: #000;
+$light: #fff;
+$radius: 20px;
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  background: $light;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+
+  .container {
+    width: 90%;
+    margin: auto;
+    @include flex-between;
+
+    .logo {
+      height: 60px;
+      width: 60px;
+    }
+
+    .nav-menu {
+      ul {
+        display: flex;
+        gap: 50px;
+        list-style: none;
+
+        li a {
+          color: $dark;
+          font-weight: 600;
+          transition: 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            color: $primary;
+          }
+
+          &.active {
+            color: $primary;
+            border-bottom: 2px solid $primary;
+            padding-bottom: 3px;
+          }
+        }
+      }
+    }
+    button {
+      background: $primary;
+      border: none;
+      padding: 10px 20px;
+      color: $light;
+      border-radius: $radius;
+      cursor: pointer;
+    }
+  }
+}

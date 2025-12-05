@@ -1,0 +1,24 @@
+@import "hero";
+@import "navbar";
+@import "about";
+@import "feature";
+@import "product";
+@import "blog";
+@import "service";
+@import "footer";
+
+
+@font-face {
+  font-family: 'SP Rf';
+  src: url('fonts/SP-Rf.woff2') format('woff2'),
+       url('fonts/SP-Rf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SP Rf', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

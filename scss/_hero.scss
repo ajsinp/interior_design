@@ -1,0 +1,55 @@
+$hero-height: 500px;
+$primary: #e92629;
+$dark: #000;
+$light: #fff;
+$radius: 20px;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  @include flex-center;
+  position: relative;
+  height: $hero-height;
+  background: url("/assets/images/landing-banner-1.png") no-repeat center center;
+  background-size: cover;
+  color: $dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-text {
+    position: relative;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: $primary;
+      border-radius: $radius;
+      color: $light;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

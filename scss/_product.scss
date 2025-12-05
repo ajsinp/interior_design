@@ -1,0 +1,74 @@
+$btn-bg: #e2dbdb;
+$primary: #e92629;
+$dark: #000;
+$light: #fff;
+$radius: 20px;
+
+@mixin btn-style {
+  padding: 10px 25px;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+}
+
+.product {
+  width: 100%;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
+  .top-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 25px;
+    background: $btn-bg;
+    color: $dark;
+    border: none;
+    border-radius: $radius;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+
+    span {
+      color: $primary;
+    }
+  }
+}
+.our-product {
+  background: url("/assets/images/d-1.jpg") no-repeat center/cover;
+  padding: 80px 60px;
+  color: $light;
+  text-align: center;
+
+  .product-card {
+    width: 45%;
+    background: $light;
+    color: $dark;
+    padding: 30px;
+    border-radius: $radius;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    margin-left: auto;
+    text-align: left;
+
+    h4 {
+      font-size: 15px;
+      color: $primary;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: $primary;
+      color: $dark;
+      @include btn-style;
+      margin-top: 15px;
+    }
+  }
+}
