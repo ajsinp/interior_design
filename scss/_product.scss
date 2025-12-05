@@ -11,11 +11,14 @@ $radius: 20px;
   cursor: pointer;
 }
 
+
+
 .product {
   width: 100%;
   padding: 30px;
   margin: auto;
   text-align: center;
+
   .top-btn {
     display: block;
     margin: 0 auto 20px auto;
@@ -41,6 +44,9 @@ $radius: 20px;
     }
   }
 }
+
+
+
 .our-product {
   background: url("/assets/images/d-1.jpg") no-repeat center/cover;
   padding: 80px 60px;
@@ -54,7 +60,6 @@ $radius: 20px;
     padding: 30px;
     border-radius: $radius;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-
     margin-left: auto;
     text-align: left;
 
@@ -69,6 +74,91 @@ $radius: 20px;
       color: $dark;
       @include btn-style;
       margin-top: 15px;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .our-product {
+    padding: 70px 40px;
+
+    .product-card {
+      width: 55%;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .product h2 {
+    font-size: 2rem;
+  }
+
+  .our-product {
+    padding: 60px 30px;
+
+    .product-card {
+      width: 65%;
+      padding: 25px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product {
+    padding: 20px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .our-product {
+    padding: 50px 20px;
+    background-position: center top;
+
+    .product-card {
+      width: 80%;
+      padding: 25px;
+
+      h4 {
+        font-size: 14px;
+      }
+
+      button {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .product {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .our-product {
+    padding: 40px 15px;
+
+    .product-card {
+      width: 100%;
+      padding: 20px;
+      text-align: left;
+
+      h4 {
+        font-size: 13px;
+      }
+
+      button {
+        padding: 7px 15px;
+        font-size: 0.85rem;
+      }
     }
   }
 }

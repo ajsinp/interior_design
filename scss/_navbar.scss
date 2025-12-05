@@ -33,14 +33,14 @@ $radius: 20px;
     .nav-menu {
       ul {
         display: flex;
-        gap: 50px;
+        gap: 40px;
         list-style: none;
 
         li a {
           color: $dark;
           font-weight: 600;
-          transition: 0.3s ease;
           text-decoration: none;
+          transition: 0.3s ease;
 
           &:hover {
             color: $primary;
@@ -54,6 +54,7 @@ $radius: 20px;
         }
       }
     }
+
     button {
       background: $primary;
       border: none;
@@ -62,5 +63,44 @@ $radius: 20px;
       border-radius: $radius;
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar .container .nav-menu ul {
+    gap: 25px;
+  }
+
+  .navbar .container button {
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container .nav-menu ul {
+    gap: 10px;
+  }
+
+  .navbar .container .logo {
+    height: 50px;
+    width: 50px;
   }
 }

@@ -1,11 +1,11 @@
-@import "hero";
-@import "navbar";
-@import "about";
-@import "feature";
-@import "product";
-@import "blog";
-@import "service";
-@import "footer";
+@use "hero";
+@use "navbar";
+@use "about";
+@use "feature";
+@use "product";
+@use "blog";
+@use "service";
+@use "footer";
 
 
 @font-face {

@@ -17,6 +17,7 @@ $radius: 20px;
     background: $btn-bg;
   }
 }
+
 @mixin flex-center {
   display: flex;
   justify-content: space-around;
@@ -30,8 +31,7 @@ $radius: 20px;
   border-radius: $radius;
 
   .service-background {
-    background: url("/assets/images/interior.png") center/cover
-      no-repeat;
+    background: url("/assets/images/interior.png") center/cover no-repeat;
     height: 250px;
     @include flex-center;
     color: $light;
@@ -42,8 +42,8 @@ $radius: 20px;
     }
 
     button {
-        @include btn;
-      }
+      @include btn;
+    }
   }
 
   .enquiry-form {
@@ -63,13 +63,17 @@ $radius: 20px;
     form {
       display: flex;
       justify-content: space-between;
+      gap: 20px;
+
       .top-btn {
         padding-top: 23px;
       }
+
       .form-group {
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        width: 100%;
 
         label {
           margin-bottom: 5px;
@@ -94,5 +98,85 @@ $radius: 20px;
         @include btn;
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .service-section .service-background {
+    height: 230px;
+  }
+
+  .service-section .enquiry-form form {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-section .service-background {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .service-section .service-background .service-content {
+    padding: 20px;
+  }
+
+  .service-section .enquiry-form {
+    width: 95%;
+    padding: 30px 20px;
+  }
+
+  .service-section .enquiry-form form {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-section .service-background {
+    height: 200px;
+    justify-content: center;
+  }
+
+  .service-section .enquiry-form {
+    top: -40px;
+  }
+
+  .service-section .enquiry-form form {
+    flex-direction: column;
+
+    .top-btn {
+      padding-top: 0;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section .service-background {
+    height: 180px;
+    padding: 10px;
+    background-position: center;
+  }
+
+  .service-section .service-background .service-content {
+    padding: 10px;
+  }
+
+  .service-section .enquiry-form {
+    padding: 25px 15px;
+    width: 100%;
+  }
+
+  .service-section .enquiry-form h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-section .enquiry-form form input,
+  .service-section .enquiry-form form textarea {
+    font-size: 0.9rem;
   }
 }

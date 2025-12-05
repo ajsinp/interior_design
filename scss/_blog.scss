@@ -8,6 +8,8 @@ $radius: 20px;
   display: flex;
   justify-content: space-between;
 }
+
+
 .blog-section {
   padding: 80px 60px;
   text-align: center;
@@ -24,7 +26,6 @@ $radius: 20px;
   .blog-container {
     @include flex-between();
     gap: 30px;
-    height: 250px;
 
     .blog-card {
       width: 48%;
@@ -33,6 +34,8 @@ $radius: 20px;
       overflow: hidden;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
       display: flex;
+      align-items: center;
+
       img {
         padding: 20px;
         border-radius: $radius;
@@ -43,9 +46,9 @@ $radius: 20px;
       .content {
         padding: 15px;
         text-align: left;
+
         span {
           color: $primary;
-          margin: 30px 10px;
           font-size: 1rem;
         }
 
@@ -73,4 +76,82 @@ $radius: 20px;
 }
 
 
+@media (max-width: 992px) {
+  .blog-section {
+    padding: 60px 40px;
 
+    .blog-container {
+      flex-direction: column;
+      height: auto;
+
+      .blog-card {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 50px 30px;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .blog-container {
+      .blog-card {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          width: 100%;
+          padding: 0;
+          border-radius: $radius $radius 0 0;
+        }
+
+        .content {
+          text-align: center;
+
+          h3 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+
+          button {
+            padding: 8px 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 40px 20px;
+
+    .section-title {
+      font-size: 1.6rem;
+    }
+
+    .blog-container {
+      .blog-card {
+        .content {
+          h3 {
+            font-size: 1.4rem;
+          }
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}
